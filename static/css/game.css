@@ -1,0 +1,46 @@
+@keyframes linha {
+    from{
+        width: 0%;
+        opacity: 0;
+    } to{
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes exibicaoXeO{
+    from{
+        opacity: 0;
+        transform: rotate(0deg);
+        scale: 0;
+    } to{
+        opacity: 1;
+        transform: rotate(360deg);
+        scale: 1;
+    }
+}
+
+.celula {
+    width: 100px !important;
+    height: 100px !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hrLinha{
+    animation: linha 0.5s linear;
+}
+
+#toastHeader{
+    animation: linha 1.2s cubic-bezier(0, 0, 0.10, 0);
+}
+#toast .toast{
+    animation: linha 1.2s cubic-bezier(0, 0, 0, 0) forwards;
+    animation-delay: 0.1s;
+}
+
+#toastHeader i {
+    animation: exibicaoXeO 1.75s cubic-bezier(0, 0, 0, 0) forwards;
+}
